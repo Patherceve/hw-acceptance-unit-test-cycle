@@ -6,5 +6,5 @@ class Movie < ActiveRecord::Base
   def self.find_with_same_director(movie)
     raise ArgumentError if movie.director.blank?
     Movie.all.where(director: movie.director)
-  end
+  end  
 end
